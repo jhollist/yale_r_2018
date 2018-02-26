@@ -1,7 +1,10 @@
 # yale_r_2018
 Materials for Introduction to Reproducible Workflows with R, markdown, and GitHub workshop at Yale 
 
+# Set Up
+
 # Agenda
+
 9:30 AM - 4:30 PM
 
 - Short presentation
