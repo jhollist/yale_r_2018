@@ -1,0 +1,14 @@
+```{r setup, echo=FALSE, warning=FALSE, purl=FALSE, message=FALSE}
+library(knitr)
+options(repos="http://cran.rstudio.com/")
+opts_chunk$set(fig.path="figures/",R.options=list(max.print=100),message = FALSE,
+               warning = FALSE, error = FALSE)
+if(!require("ggplot2")){
+  install.packages("ggplot2")
+}
+if(!require("dplyr")){
+  install.packages("dplyr")
+}
+library("ggplot2")
+library("dplyr")
+```

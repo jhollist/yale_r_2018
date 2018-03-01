@@ -26,17 +26,21 @@ If you follow these directions you should have a working install of both Git and
 |Time               |Subject                           |
 |-------------------|----------------------------------|
 |9:30 AM - 10:00 AM |Introductions and Checking Set Ups| 
-|9:45 AM - 10:00 AM |Why R and Reproducible?           | 
+|9:45 AM - 10:00 AM |Motivationals                     | 
 |10:00 AM - 10:30 AM|The Punch Line                    |
-|10:30 AM - 11:00 AM|R and RStudio Basics              |
-|11:00 AM - Noon    |Markdown and R Markdown           |
+|10:30 AM - 11:30 AM|R and RStudio Basics              |
+|11:30 AM - Noon    |Markdown and R Markdown           |
 |Noon - 1:00 PM     |LUNCH                             |
 |1:00 PM - 2:00 PM  |Tidy Data in R                    |
 |2:00 PM - 3:00 PM  |Data Visualization with `ggplot2` |
 |3:00 PM - 4:00 PM  |Git and GitHub                    | 
 |4:00 PM - 4:30 PM  |Miscellaneous                     |
  
-- How to use GitHub for a lab (maybe/maybe not in workshop)
-  - wikis on github
-    - Lab/Center organization
-    - Jeff Leek
+# Addtional links
+
+- Inspiration on how to use GitHub for a lab/research group
+  - Jeff Leek: Good stuff on a number of topics, all with an open science bent.
+    - [R Packages](https://github.com/jtleek/rpackages)
+    - [Talks](https://github.com/jtleek/talkguide)
+    - [Data Sharing](https://github.com/jtleek/datasharing)
+    - [Genomics Papers](https://github.com/jtleek/genomicspapers)
