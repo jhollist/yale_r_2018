@@ -45,4 +45,6 @@ If you follow these directions you should have a working install of both Git and
     - [Data Sharing](https://github.com/jtleek/datasharing)
     - [Genomics Papers](https://github.com/jtleek/genomicspapers)
   - [Earth Lab at University of Colorado](https://github.com/earthlab)
-  
+- Related Links
+  - [Industrial Ecology](https://github.com/IndEcol)
+  - [World Input/Output Datasets](https://github.com/bquast/wiod)
