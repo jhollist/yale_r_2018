@@ -26,15 +26,15 @@ If you follow these directions you should have a working install of both Git and
 |Time               |Subject                           |
 |-------------------|----------------------------------|
 |9:30 AM - 10:00 AM |Introductions and Checking Set Ups| 
-|9:45 AM - 10:00 AM |Motivationals                     | 
-|10:00 AM - 10:30 AM|The Punch Line                    |
-|10:30 AM - 11:30 AM|R and RStudio Basics              |
-|11:30 AM - Noon    |Markdown and R Markdown           |
-|Noon - 1:00 PM     |LUNCH                             |
-|1:00 PM - 2:00 PM  |Tidy Data in R                    |
-|2:00 PM - 3:00 PM  |Data Visualization with `ggplot2` |
-|3:00 PM - 4:00 PM  |Git and GitHub                    | 
-|4:00 PM - 4:30 PM  |Miscellaneous                     |
+|9:45 AM - 10:00 AM |[Motivationals](https://jwhollister.com/codivation)| 
+|10:00 AM - 10:30 AM|[The Punch Line](lessons/01_the_punch_line.md)|
+|10:30 AM - 11:30 AM|[R and RStudio Basics](lessons/02_r_and_rstudio.md)|
+|11:30 AM - Noon    |[Markdown and R Markdown](lessons/03_markdown_and_rmarkdown.md)|
+|Noon - 1:00 PM     |LUNCH|
+|1:00 PM - 2:00 PM  |[Tidy Data in R](lessons/04_tidy_data_in_r.Rmd)
+|2:00 PM - 3:00 PM  |[Data Visualization with `ggplot2`](lessons/05_data_viz_with_ggplot2.md)|
+|3:00 PM - 4:00 PM  |[Git and GitHub](lessons/06_git_and_github.md)| 
+|4:00 PM - 4:30 PM  |Miscellaneous|
  
 # Addtional links
 
@@ -44,3 +44,5 @@ If you follow these directions you should have a working install of both Git and
     - [Talks](https://github.com/jtleek/talkguide)
     - [Data Sharing](https://github.com/jtleek/datasharing)
     - [Genomics Papers](https://github.com/jtleek/genomicspapers)
+  - [Earth Lab at University of Colorado](https://github.com/earthlab)
+  
