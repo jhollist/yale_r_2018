@@ -21,6 +21,8 @@ If you follow these directions you should have a working install of both Git and
   - [Mac OS X 10.6+ 64-bit](https://download1.rstudio.org/RStudio-1.1.423.dmg)
 - Using the installer, install RStudio how you normally would install any application on your computer.
 
+Last thing to take care of is to make sure you have a GitHub account set up.  The sign up is available at <https://github.com/>
+
 # Agenda (subject to change!)
 
 |Time               |Subject                           |
@@ -48,3 +50,4 @@ If you follow these directions you should have a working install of both Git and
 - Related Links
   - [Industrial Ecology](https://github.com/IndEcol)
   - [World Input/Output Datasets](https://github.com/bquast/wiod)
+  - [Industrial Ecology 2.0](http://onlinelibrary.wiley.com/doi/10.1111/j.1530-9290.2010.00281.x/full)
