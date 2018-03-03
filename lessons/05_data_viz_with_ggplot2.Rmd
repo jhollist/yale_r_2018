@@ -12,3 +12,5 @@ if(!require("dplyr")){
 library("ggplot2")
 library("dplyr")
 ```
+
+https://github.com/EmilHvitfeldt/r-color-palettes

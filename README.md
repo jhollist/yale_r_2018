@@ -47,7 +47,9 @@ Last thing to take care of is to make sure you have a GitHub account set up.  Th
     - [Data Sharing](https://github.com/jtleek/datasharing)
     - [Genomics Papers](https://github.com/jtleek/genomicspapers)
   - [Earth Lab at University of Colorado](https://github.com/earthlab)
-- Related Links
+  - [Wee Ecology](https://github.com/weecology)
+  - [Lab for Data Intensive Biology](https://github.com/dib-lab)
+- Industrial Ecology Links
   - [Industrial Ecology](https://github.com/IndEcol)
   - [World Input/Output Datasets](https://github.com/bquast/wiod)
   - [Industrial Ecology 2.0](http://onlinelibrary.wiley.com/doi/10.1111/j.1530-9290.2010.00281.x/full)
