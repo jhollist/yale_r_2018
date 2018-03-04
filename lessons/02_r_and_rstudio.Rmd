@@ -52,34 +52,20 @@ Projects are a way to organize your work in RStudio.  Essentially they are folde
 
 ![rstudio proj](figures/rstudio_proj.jpg)
 
-### Scripts
+### Source, Scripts, and R Markdown
 
-Scripts are text files that hold the code you write.  We will work both with scripts and the console during this workshop.  To create a new script you use "File:New File:R Script".
+The source you work on will usually be scripts, text files that hold the code you write or in our case R markdown that can hold code, documentation, etc.  We will work with our `.Rmd` files and the console during this workshop.  To create a new script you use "File:New File:R Markdown".
 
 ![rstudio script](figures/rstudio_script.jpg)
 
 
 ### Interacting with R inside of RStudio
 
-Once you have functions in your script, they still need to be sent to the R console.  There are several ways to do this.  There is the old stand-by of copying and pasting, but this is a bit cumbersome.  Instead you can use the `Run` button in the upper right corner of the source pane, or even better (I think so, anyway) you can use `ctrl-enter`.  Both the `Run` buttons and `ctrl-enter` will send the line that your cursor is on and move to the next line or it will send just the selected text.
+Once you have text and code in your R Markdown file, they still need to be sent to the R console or rendered.  There are several ways to do this.  There is the old stand-by of copying and pasting, but this is a bit cumbersome.  Instead you can use the `Run` menu in the upper right corner of the source pane, or even better (I think so, anyway) you can use `ctrl-enter`.  Both the `Run` buttons and `ctrl-enter` will send the line that your cursor is on and move to the next line or it will send just the selected text.
 
 ![rstudio-script](figures/rstudio_run.jpg)
 
-## Exercise 1.1
-
-This exercise will make sure R and RStudio are working and that you can get around the basics in RStudio.  Use the green stickies when you have completed, and red stickies if you are running into problems.
-
-1. Start RStudio: To start both R and RStudio requires only firing up RStudio.  RStudio should be available from All Programs at the Start Menu.  Fire up RStudio. 
-
-2. Take a few minutes to look around RStudio.  Find the Console Pane. Find Global and Project Options (hint: look in Tools).  Look at the Environment, History Pane.  Look at the Files, Plots, Packages, etc. pane.
-
-3. Create a new project.  Name it "intro_r_workshop".  We will use this for the rest of the workshop.
-
-4. Create a new "R Script" in the Source Pane, save that file into your newly created project and name it "r7_introR.R". It'll just be a blank text file at this point.
-
-2. Add in a comment line to separate this section.  It should look something like: `# Exercise 1.1: Just Getting used to RStudio and Scripts`.
-
-5. Add a single line to this script with the following text: `ls()`.  This is an R function that lists objects in your current environment.  Use the various ways we showed to send this command to the R Console.  Also, try typing this directly into the R Console and hit `Enter` to run it.  
+When working with R Markdown files we usually want to render those to an output format such as html or pdf.  Again, there are several ways to do that.  The easiest is it use the knit or preview button.
 
 ## Functions and basic syntax 
 
