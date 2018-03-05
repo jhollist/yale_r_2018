@@ -2,77 +2,24 @@
 
 # R Basics
 
-In this first lesson we are going to go over the very basics of R, cover some basic terminology, talk a little about syntax and point you to resources for getting help.
+In this lesson we are going to go over the very basics of R, cover some basic terminology, talk a little about syntax and point you to resources for getting help.
 
 ## Lesson Outline:
 
-- [Working with R and RStudio](#working-with-r-and-rstudio)
 - [Functions and basic syntax](#functions-and-basic-syntax)
 - [Packages](#packages)
 - [Operators and objects](#operators-and-objects)
 - [Getting help](#getting-help)
 
 ## Lesson Exercises:
-- [Exercise 1.1](#exercise-11)
-- [Exercise 1.2](#exercise-12)
-- [Exercise 1.3](#exercise-13)
-- [Exercise 1.4](#exercise-14)
+- [Exercise 2.1](#exercise-21)
 
-
-## Working with R and RStudio
-Over the last several years, RStudio has become a very popular IDE (integrated development environment) for R. In addition to interacting with the R Console, RStudio has many extras built in including version control integration, package building, reproducible research, de-bugging, and built-in text editor with smart highlighting and code completion.  This is the environment we will be using for the workshop and should set you up for continued learning with R.
-
-Before we get to the first exercise, let's spend a bit of time working with RStudio. Just watch as I demo this.  The first exercise will have you doing these steps.
-
-### Fire up R and RStudio
-Find the RStudio shortcut or menu (OS specific of course) and fire it up.  Once done, it should look something like:
-
-![rstudio](figures/rstudio.jpg)
-
-
-Let's take some time to look around.  I'll show each of the different sections, or "panes" as they are known.
-
-
-### Projects
-
-Projects are a way to organize your work in RStudio.  Essentially they are folders, but with a few added files so that you can manage some options on a per project basis.  To create a new project use File:New Project, or use the drop-down on the top right of the RStudio window.  It will look like this after you select "New Project..."
-
-![rstudio proj](figures/rstudio_proj.jpg)
-
-### Scripts
-
-Scripts are text files that hold the code you write.  We will work both with scripts and the console during this workshop.  To create a new script you use "File:New File:R Script".
-
-![rstudio script](figures/rstudio_script.jpg)
-
-
-### Interacting with R inside of RStudio
-
-Once you have functions in your script, they still need to be sent to the R console.  There are several ways to do this.  There is the old stand-by of copying and pasting, but this is a bit cumbersome.  Instead you can use the `Run` button in the upper right corner of the source pane, or even better (I think so, anyway) you can use `ctrl-enter`.  Both the `Run` buttons and `ctrl-enter` will send the line that your cursor is on and move to the next line or it will send just the selected text.
-
-![rstudio-script](figures/rstudio_run.jpg)
-
-## Exercise 1.1
-
-This exercise will make sure R and RStudio are working and that you can get around the basics in RStudio.  Use the green stickies when you have completed, and red stickies if you are running into problems.
-
-1. Start RStudio: To start both R and RStudio requires only firing up RStudio.  RStudio should be available from All Programs at the Start Menu.  Fire up RStudio. 
-
-2. Take a few minutes to look around RStudio.  Find the Console Pane. Find Global and Project Options (hint: look in Tools).  Look at the Environment, History Pane.  Look at the Files, Plots, Packages, etc. pane.
-
-3. Create a new project.  Name it "intro_r_workshop".  We will use this for the rest of the workshop.
-
-4. Create a new "R Script" in the Source Pane, save that file into your newly created project and name it "r7_introR.R". It'll just be a blank text file at this point.
-
-2. Add in a comment line to separate this section.  It should look something like: `# Exercise 1.1: Just Getting used to RStudio and Scripts`.
-
-5. Add a single line to this script with the following text: `ls()`.  This is an R function that lists objects in your current environment.  Use the various ways we showed to send this command to the R Console.  Also, try typing this directly into the R Console and hit `Enter` to run it.  
 
 ## Functions and basic syntax 
 
 R is a functional programming language and as such, most everything you do uses a function.
 
-The basic syntax of function follows the form: `function_name(arg1, arg2, ...)`.  With the base install, you will gain access to many (3137 functions, to be exact).  Some examples:
+The basic syntax of function follows the form: `function_name(arg1, arg2, ...)`.  With the base install, you will gain access to many (2925 functions, to be exact).  Some examples:
 
 
 ```r
@@ -99,21 +46,21 @@ rnorm(100,mean=10,sd=2)
 ```
 
 ```
-##   [1]  8.133086  9.098731 11.380574  7.580359 11.781809 12.928118 11.998699
-##   [8] 12.187020 12.016809  7.842623 10.521781 10.466348  8.482591  8.257770
-##  [15]  9.876794  4.088240  9.014049  7.403032  2.684416  8.876639  8.927049
-##  [22] 10.567790 10.773746 13.881663  5.644766  7.604578 11.190719  8.832454
-##  [29] 10.435004 10.893308  7.257220  3.172701 10.513172  8.157367  7.978355
-##  [36] 12.479162 10.643314  7.225221  7.227555  9.271322  8.655445  7.213046
-##  [43]  9.829192  9.500578 13.165040 11.070296  6.879075 12.782910  6.625681
-##  [50] 13.941993 11.699920  8.425916 10.734658 12.995088 10.424597  7.996125
-##  [57]  9.216444 11.929386 10.451954 12.179580 10.338222  9.468578  7.852596
-##  [64]  8.945769  9.756196  9.646229 10.214176 10.576107 10.250654 13.271197
-##  [71] 12.495352 10.527936 11.599578  9.401983 10.552667  7.846590  9.685390
-##  [78] 11.384891 10.204613  8.851048 12.727939  9.278930  9.183584  8.257335
-##  [85]  4.862330  9.490428  6.989407  8.282860 11.996986  9.678500  8.162687
-##  [92] 10.786144  8.440386 10.355784 12.503093  9.506966  9.308351 11.739195
-##  [99] 12.589215  7.108372
+##   [1]  8.528013  7.516343 10.187090  6.749085  6.768267 14.753797 11.029263
+##   [8]  9.495388  9.490882  8.917163 11.674955 10.286181 13.064623  7.446098
+##  [15] 12.386976  6.571405  9.460026 12.367522  9.192736  5.928906 10.763808
+##  [22] 10.279514 12.492799 12.486795  7.268113  9.567898  8.184697 14.535543
+##  [29] 12.239086  9.473323  8.712520 13.547811  9.410362 10.140625 12.099625
+##  [36] 12.442091 11.686279  8.634723  9.443363  6.651266  7.272432  9.805012
+##  [43]  9.568905  6.831657 15.530321  9.309148  5.256596  7.730677 11.388602
+##  [50]  9.076915  8.654631 10.314373  7.118712  7.835714 10.656552  7.199979
+##  [57]  9.899884 12.440127  7.033263  8.303181 11.207748  7.450956  9.821425
+##  [64]  7.424570  9.255116 10.148551  8.270997 10.900257  9.897516  8.230040
+##  [71] 10.148623 10.499618  8.649840 10.174269 11.253152  6.555323  8.322553
+##  [78]  8.215069 13.339277 10.765445 12.656711 11.991631  6.581790  7.037685
+##  [85]  9.480289  8.870986  8.958252 10.150251  7.187827  6.495198 11.229179
+##  [92] 10.441488  9.172312  9.692661 10.762017  7.690683  9.134065 11.872170
+##  [99] 14.545463 12.705070
 ```
 
 ```r
@@ -122,7 +69,7 @@ mean(rnorm(100))
 ```
 
 ```
-## [1] -0.1277294
+## [1] -0.04677998
 ```
 
 ```r
@@ -131,7 +78,7 @@ sum(rnorm(100))
 ```
 
 ```
-## [1] -12.89065
+## [1] 2.964955
 ```
 
 ### A few side notes 
@@ -149,22 +96,13 @@ There are several other characters that commonly show up in R code.  These are:
 
 The `#` indicates a comment.  You can put whatever else you'd like after this, but on the same line as the `#`.  R will not evaluate it. Multiple `#####`, are still just seen as a comment.  When commenting your code, err on the side of too much!  Also, you will see `()`, `[]`, and `{}` used in R code.  The `()` indicates a function (almost always), the `[]` indicates indexing (grabbing values by the location), and the `{}` groups code that is meant to be run together and is usually used when programming functions in R.
 
-### Exercise 1.2
-
-For this second exercise we are going to get used to using some basic functions.  Use the yellow stickies when you have completed, and blue stickies if you are running into problems.
-
-1. Save your work in a script, make sure "r7_introR.R" file you created in Exercise 1 is open. Enter your commands into this script.  
-2. Add in a comment line to separate this section.  It should look something like: `# Exercise 1.2: Getting used to functions and basic syntax`.
-2. Use the `print` function.  Remember, use the "run" button or `ctrl-enter` in RStudio to have R interpret it and print something to the screen.
-3. Combine `mean` and `rnorm` to return the mean value of a set of random numbers.
-
 ## Packages
 
 The base install of R is quite powerful, but you will soon have a need or desire to go beyond this.  Packages provide this ability.  They are a standardized method for extending R with new methods, techniques, and programming functionality.  There is a lot to say about packages regarding finding them, using them, etc., but for now let's focus just on the basics.  
 
 ### CRAN
 
-One of the reasons for R's popularity is CRAN, [The Comprehensive R Archive Network](http://cran.r-project.org/).  This is where you download R and also where most will gain access to packages (there are other places, but that is for later).  Not much else to say about this now other than to be aware of it.  As of 2018-03-02, there are 12221 on CRAN! 
+One of the reasons for R's popularity is CRAN, [The Comprehensive R Archive Network](http://cran.r-project.org/).  This is where you download R and also where most will gain access to packages (there are other places, but that is for later).  Not much else to say about this now other than to be aware of it.  As of 2018-03-05, there are 12190 on CRAN! 
 
 ### Installing packages
 
@@ -209,15 +147,6 @@ You will often see people use `require()` to load a package. It is better form t
 
 And now for a little pedantry.  You will often hear people use the terms "library" and "package" interchangeably.  This is not correct.  A package is what is submitted to CRAN, it is what contains a group of functions that address a common problem, and it is what has allowed R to expand.  A library is, more or less, where you packages are stored.  You have a path to that library and this is where R puts new packages that you install (e.g. via `install.packages()`).  These two terms are related, but most certainly different.  Apologies up front if I slip and use one when I actually mean the other...
 
-### Exercise 1.3
-
-For this third exercise we are going to get used to using some basic functions, working with scripts and not just the console, and look through some task views and get used to basic navigation around packages.  Use the green stickies when you have completed, and red stickies if you are running into problems.
-
-1. Install the `dplyr` and `ggplot2` packages.  Do this directly in the console.
-2. Why might we not want to add `install.packages` into the script?
-2. Add in a comment line to separate this section.  It should look something like: `# Exercise 1.3: Adding packages`.
-2. Load `ggplot` and `dplyr` into your library.  Do this in your script.  Make sure that it gets sent to the console.
-3. Why might we want to add the `library()` calls in our script?
 
 ## Operators and objects
 As I mentioned above, the console and using R interactively is very powerful.  We will do this quite a bit.  Let's spend a little time playing around in the console and learn a few new functions.
@@ -407,16 +336,6 @@ This is probably a good spot to bring up quotes vs no quotes around arguments in
 
 Next thing you might want to do is navigate around your files and directories. While you can do this directly from the console, it is going to be better practice to mostly use RStudio projects to manage your folders, working directory etc.  You can also navigate using the Files, etc. pane. 
 
-## Exercise 1.4
-1. Add in a comment line to separate this section.  It should look something like: `# Exercise 1.4: Objects and Operators`.
-1. Create two objects named `number1` and `number2` and give them the values of 25 and 4, respectively 
-2. Create two more objects named `string1` and `string2`, give them any character string that you would like. 
-3. Now using `number1`,`number2`, and the power of math create an object called `number3` that equals 100.
-4. Create two more objects whose value is of your choosing
-5. List the objects in your workspace
-6. Remove `string2`
-10. Try to add `string1` and `number1`.  What happens?  
-
 ## Getting help
 Being able to find help and interpret that help is probably one of the most important skills for learning a new language.  R is no different. Help on functions and packages can be accessed directly from R, can be found on CRAN and other official R resources, searched on Google, found on StackOverflow, or from any number of fantastic online resources. I will cover a few of these here. 
 
@@ -454,8 +373,23 @@ One specific resource that I use quite a bit is [StackOverflow with the 'r' tag]
 ### Other Resources
 As I mention earlier, there are TOO many resources to mention and everyone has their favorites.  Below are just a few that I like.
 
-- [R For Cats](http://rforcats.net/): Basic introduction site, meant to be a gentle and light-hearted introduction
+- [R For Data Science](http://r4ds.had.co.nz/): Another book by Hadley and Garrett Grolemund.  First reference I suggest for new (and experienced) R Learners, especially for all things Tidy.
 - [Advanced R](http://adv-r.had.co.nz/): Web home of Hadley Wickham's new book.  Gets into more advanced topics, but also covers the basics in a great way.
-- [Other Resources](http://scicomp2014.edc.uri.edu/resources.html): A list I helped compile for a URI Class.
+- [R For Cats](http://rforcats.net/): Basic introduction site, meant to be a gentle and light-hearted introduction.
 - [CRAN Cheatsheets](http://cran.r-project.org/doc/contrib/Short-refcard.pdf): A good cheat sheet from the official source
 - [RStudio Cheatsheets](http://www.rstudio.com/resources/cheatsheets/): Additional cheat sheets from RStudio.  I am especially fond of the data wrangling one.
+
+
+## Exercise 2.1
+
+We should still have our `yale_markdown.Rmd` file open.  We will be working with this as we go through the rest of the excercises.
+
+Take a look at this file and with the person sitting next to you find the following:
+
+1. Find the `options()` function.  What lines is it on?  What is the argument?
+2. Now find the lines on which you think we install packages and load libraries.  It is a bit fancier that a straight up `install.packages()` and `library()`.  Discuss what you think we are doing with these lines.
+3. What does line 16 accomplish?
+4. Now install the package `lubridate` and add a line after the `lapply()` line the loads lubridate.
+5. Bring up the package level help for the `lubridate` package.  What does this package do?
+
+

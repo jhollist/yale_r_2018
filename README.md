@@ -29,8 +29,8 @@ Last thing to take care of is to make sure you have a GitHub account set up.  Th
 |-------------------|----------------------------------|
 |9:30 AM - 10:00 AM |Introductions and Checking Set Ups| 
 |9:45 AM - 10:00 AM |[Motivationals](https://jwhollister.com/codivation)| 
-|10:00 AM - 10:30 AM|[The Punch Line](lessons/01_the_punch_line.md)|
-|10:30 AM - 11:30 AM|[R and RStudio Basics](lessons/02_r_and_rstudio.md)|
+|10:00 AM - 10:30 AM|[RStudio](lessons/01_rstudio.md)|
+|10:30 AM - 11:30 AM|[R Basics](lessons/02_r_basics.md)|
 |11:30 AM - Noon    |[Markdown and R Markdown](lessons/03_markdown_and_rmarkdown.md)|
 |Noon - 1:00 PM     |LUNCH|
 |1:00 PM - 2:00 PM  |[Tidy Data in R](lessons/04_tidy_data_in_r.Rmd)
