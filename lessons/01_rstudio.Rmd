@@ -60,5 +60,5 @@ Once you have text and code in your R Markdown file, they still need to be sent 
 
 Now that we have RStudio opened and know are way around a bit, we are going to jump straight to the end and see what an R Markdown file looks like, render it and be amazed!  This is kind of like telling a joke by starting with the punch line first!
 
-1. Follow the link to [The Punch Line](punchline.Rmd) and we will work through that together to get more familar with R Studio, R Markdown, and GitHub (sort of). 
+1. Follow the link to [The Punch Line](punchline.md) and we will work through that together to get more familar with R Studio, R Markdown, and GitHub (sort of). 
 
