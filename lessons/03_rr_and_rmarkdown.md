@@ -4,7 +4,7 @@
 
 Reproducibility and the ["reproducibility crisis"](http://www.bbc.com/news/science-environment-39054778) in science have received quite a bit of attention over the last several years. As such, interest in making our work more reproducible has also increased.  The focus of this workshop is on a small, but very important part, of reproducibility, computational reproducibility.  In particular, we will focus on what Victoria Stodden has described as "Open or Reproducible Research" in which code, data, and descriptions are all freely available (for more on this see <http://stodden.net/icerm_report.pdf>).  An exhaustive review of all things reproducible is beyond the scope of this workshop, so I will point you to the best general resource I know of on this, the [rOpenSci Reproducibility Guide](http://ropensci.github.io/reproducibility-guide) and in particular the [Introduction](http://ropensci.github.io/reproducibility-guide/sections/introduction/).
 
-After taking this workshop, you will:
+After this lesson, you will:
 
 - Understand the value of reproducible documents
 - Gain familiarity with Markdown, `rmarkdown` and `knitr`
@@ -19,7 +19,7 @@ After taking this workshop, you will:
 - [Rendering](#rendering)
 
 ## Exercises
-- [Exercise 3.1](#exercise-1)
+- [Exercise 3.1](#exercise-31)
 
 ## Reproducible Documents
 
@@ -170,16 +170,16 @@ knitr::kable(iris[sample(nrow(iris),10),],row.names = FALSE)
 
 | Sepal.Length| Sepal.Width| Petal.Length| Petal.Width|Species    |
 |------------:|-----------:|------------:|-----------:|:----------|
+|          5.4|         3.4|          1.5|         0.4|setosa     |
+|          5.4|         3.9|          1.7|         0.4|setosa     |
+|          6.6|         3.0|          4.4|         1.4|versicolor |
+|          6.4|         2.8|          5.6|         2.1|virginica  |
+|          5.2|         3.4|          1.4|         0.2|setosa     |
+|          7.2|         3.6|          6.1|         2.5|virginica  |
+|          6.1|         3.0|          4.9|         1.8|virginica  |
+|          5.7|         2.8|          4.1|         1.3|versicolor |
 |          5.5|         2.5|          4.0|         1.3|versicolor |
-|          7.9|         3.8|          6.4|         2.0|virginica  |
-|          5.5|         2.4|          3.8|         1.1|versicolor |
-|          6.0|         2.2|          5.0|         1.5|virginica  |
-|          5.1|         3.8|          1.5|         0.3|setosa     |
-|          6.4|         2.9|          4.3|         1.3|versicolor |
-|          6.7|         3.1|          4.4|         1.4|versicolor |
-|          6.2|         2.8|          4.8|         1.8|virginica  |
 |          5.5|         3.5|          1.3|         0.2|setosa     |
-|          7.7|         2.6|          6.9|         2.3|virginica  |
 
 Once we cover data frames, the utility of doing this will hopefully become more clear.
 

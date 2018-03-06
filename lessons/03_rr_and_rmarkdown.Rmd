@@ -17,7 +17,7 @@ library("dplyr")
 
 Reproducibility and the ["reproducibility crisis"](http://www.bbc.com/news/science-environment-39054778) in science have received quite a bit of attention over the last several years. As such, interest in making our work more reproducible has also increased.  The focus of this workshop is on a small, but very important part, of reproducibility, computational reproducibility.  In particular, we will focus on what Victoria Stodden has described as "Open or Reproducible Research" in which code, data, and descriptions are all freely available (for more on this see <http://stodden.net/icerm_report.pdf>).  An exhaustive review of all things reproducible is beyond the scope of this workshop, so I will point you to the best general resource I know of on this, the [rOpenSci Reproducibility Guide](http://ropensci.github.io/reproducibility-guide) and in particular the [Introduction](http://ropensci.github.io/reproducibility-guide/sections/introduction/).
 
-After taking this workshop, you will:
+After this lesson, you will:
 
 - Understand the value of reproducible documents
 - Gain familiarity with Markdown, `rmarkdown` and `knitr`
@@ -32,7 +32,7 @@ After taking this workshop, you will:
 - [Rendering](#rendering)
 
 ## Exercises
-- [Exercise 3.1](#exercise-1)
+- [Exercise 3.1](#exercise-31)
 
 ## Reproducible Documents
 
