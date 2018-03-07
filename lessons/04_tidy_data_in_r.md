@@ -156,8 +156,6 @@ We have learned about data frames, how to create them, and about several ways to
 3. Each cell has a single value
 4. The data must be rectangular
 
-The best way to start to understand this is to look at examples.  Let's dig into our datasets and find ways to tidy them up.  We will do this together via examples in the [`yale_markdown.Rmd`](https://raw.githubusercontent.com/jhollist/yale_markdown/master/yale_markdown.Rmd) file.  Our goal will be to add in the the GDP per capita values and then calculate an estimate of the population for each country.  To do this we will need to tidy up our data, join datasets together and add in a new column with the population estimates. 
-
 Lastly, if you want to read more about this there are several good sources:
 
 - The previously linked R4DS Chapter on [tidy data](http://r4ds.had.co.nz/tidy-data.html)
@@ -165,3 +163,224 @@ Lastly, if you want to read more about this there are several good sources:
 - The [Tidy Data Vignette](http://tidyr.tidyverse.org/articles/tidy-data.html)
 - Really anything on the [Tidyverse page](https://www.tidyverse.org/)
 
+Let's now see some of the basic tools for tidying data using the `tidyr` and `dplyr` packages.
+
+### Spread and Gather with `tidyr`
+
+Two of the function I use the most in `tidyr` are `spread()` and `gather()`.  They are somewhat similar to pivot tables in spreadsheets and allow us combine columns together or spread them back out.  I'll admit it still sometimes feels a bit like magic.  So, abracadabra!
+
+Load up the library:
+
+
+```r
+library(tidyr)
+```
+
+### gather
+
+Let's build an untidy data frame.  This is made up, but let's say we want to grab some monthly stats on number of visitors (in thousands) per state...
+
+
+```r
+dirty_df <- data_frame(state = c("CT","RI","MA"), jan = c(3.1,8.9,9.3), feb = c(1.0,4.2,8.6), march = c(2.9,3.1,12.5), april = c(4.4,5.6,14.2))
+dirty_df
+```
+
+```
+## # A tibble: 3 x 5
+##   state   jan   feb march april
+##   <chr> <dbl> <dbl> <dbl> <dbl>
+## 1 CT     3.10  1.00  2.90  4.40
+## 2 RI     8.90  4.20  3.10  5.60
+## 3 MA     9.30  8.60 12.5  14.2
+```
+
+What would be a tidy way to represent this same data set?
+
+They way I would do this is to gather the month columns into two new columns that reperesnet month and number of vistors/
+
+
+```r
+tidy_df <- gather(dirty_df, month, vistors, jan:april) 
+tidy_df
+```
+
+```
+## # A tibble: 12 x 3
+##    state month vistors
+##    <chr> <chr>   <dbl>
+##  1 CT    jan      3.10
+##  2 RI    jan      8.90
+##  3 MA    jan      9.30
+##  4 CT    feb      1.00
+##  5 RI    feb      4.20
+##  6 MA    feb      8.60
+##  7 CT    march    2.90
+##  8 RI    march    3.10
+##  9 MA    march   12.5 
+## 10 CT    april    4.40
+## 11 RI    april    5.60
+## 12 MA    april   14.2
+```
+
+### spread
+
+Here's another possibility from my world.  We have data collected at multiple sampling locations and we are measuring multiple water quality parameters.
+
+
+```r
+long_df <- data_frame(station = rep(c("A","A","B","B"),3), 
+                      month = c(rep("june",4),rep("july",4),rep("aug", 4)), 
+                      parameter = rep(c("chla","temp"), 6),
+                      value = c(18,23,3,22,19.5,24,3.5,22.25,32,26.7,4.2,23))
+long_df
+```
+
+```
+## # A tibble: 12 x 4
+##    station month parameter value
+##    <chr>   <chr> <chr>     <dbl>
+##  1 A       june  chla      18.0 
+##  2 A       june  temp      23.0 
+##  3 B       june  chla       3.00
+##  4 B       june  temp      22.0 
+##  5 A       july  chla      19.5 
+##  6 A       july  temp      24.0 
+##  7 B       july  chla       3.50
+##  8 B       july  temp      22.2 
+##  9 A       aug   chla      32.0 
+## 10 A       aug   temp      26.7 
+## 11 B       aug   chla       4.20
+## 12 B       aug   temp      23.0
+```
+
+We might want to have this in a wide as opposed to long format.  That can be accomplished with `spread()`
+
+
+```r
+wide_df <- spread(long_df,parameter,value)
+wide_df
+```
+
+```
+## # A tibble: 6 x 4
+##   station month  chla  temp
+##   <chr>   <chr> <dbl> <dbl>
+## 1 A       aug   32.0   26.7
+## 2 A       july  19.5   24.0
+## 3 A       june  18.0   23.0
+## 4 B       aug    4.20  23.0
+## 5 B       july   3.50  22.2
+## 6 B       june   3.00  22.0
+```
+
+### Data manipulation with `dplyr`
+
+There are a lot of different ways to manipulate data in R, but one that is a fairly recent addition and that is at the core of the Tidyverse is `dplyr`.  In particular, we are going to look at selecting columns, filtering data, adding new columns, grouping data, and summarizing data.  
+
+#### select
+
+Often we get datasets that have many columns or we might what to re-order those columns.  We can accomplish both of these with select.  Here's a quick example with the `iris` dataset.  We will also be introducing the concept of the pipe: `%>%` which we will be using going forward.
+
+
+```r
+iris_petals <- iris %>%
+  select(Species, Petal.Width, Petal.Length)
+as_tibble(iris_petals)
+```
+
+```
+## # A tibble: 150 x 3
+##    Species Petal.Width Petal.Length
+##    <fct>         <dbl>        <dbl>
+##  1 setosa        0.200         1.40
+##  2 setosa        0.200         1.40
+##  3 setosa        0.200         1.30
+##  4 setosa        0.200         1.50
+##  5 setosa        0.200         1.40
+##  6 setosa        0.400         1.70
+##  7 setosa        0.300         1.40
+##  8 setosa        0.200         1.50
+##  9 setosa        0.200         1.40
+## 10 setosa        0.100         1.50
+## # ... with 140 more rows
+```
+
+The end result of this is a data frame, `iris_petals` that has three columns: Species, Petal.Width and Petal.Length in the order that we specified.
+
+#### filter
+
+The `filter()` function allows us to select out data that meets certain criteria.  For instance we might want to further manipulate our 3 column data frame with only one species of Iris and Petals greater than the .
+
+
+```r
+iris_petals_virginica <- iris %>%
+  select(species = Species, petal_width = Petal.Width, petal_length = Petal.Length) %>%
+  filter(species == "virginica") %>%
+  filter(petal_width >= median(petal_width))
+as_tibble(iris_petals_virginica)  
+```
+
+```
+## # A tibble: 29 x 3
+##    species   petal_width petal_length
+##    <fct>           <dbl>        <dbl>
+##  1 virginica        2.50         6.00
+##  2 virginica        2.10         5.90
+##  3 virginica        2.20         5.80
+##  4 virginica        2.10         6.60
+##  5 virginica        2.50         6.10
+##  6 virginica        2.00         5.10
+##  7 virginica        2.10         5.50
+##  8 virginica        2.00         5.00
+##  9 virginica        2.40         5.10
+## 10 virginica        2.30         5.30
+## # ... with 19 more rows
+```
+
+#### mutate
+
+Now say we have some research that suggest the ratio of the petal width and length is imporant.  We might want to add that as a new column in our data set, but we want to do this now for all or our species and all sizes.
+
+
+```r
+iris_petals_ratio <- iris %>%
+  select(species = Species, petal_width = Petal.Width, petal_length = Petal.Length) %>%
+  mutate(petal_ratio = petal_width/petal_length)
+as_tibble(iris_petals_ratio)
+```
+
+```
+## # A tibble: 150 x 4
+##    species petal_width petal_length petal_ratio
+##    <fct>         <dbl>        <dbl>       <dbl>
+##  1 setosa        0.200         1.40      0.143 
+##  2 setosa        0.200         1.40      0.143 
+##  3 setosa        0.200         1.30      0.154 
+##  4 setosa        0.200         1.50      0.133 
+##  5 setosa        0.200         1.40      0.143 
+##  6 setosa        0.400         1.70      0.235 
+##  7 setosa        0.300         1.40      0.214 
+##  8 setosa        0.200         1.50      0.133 
+##  9 setosa        0.200         1.40      0.143 
+## 10 setosa        0.100         1.50      0.0667
+## # ... with 140 more rows
+```
+
+#### group_by and summarize
+
+Lastly, we might want to get some summary statistics of our important petal ratio metric for each of the species.
+
+
+```r
+iris_petal_ratio_species <- iris %>%
+  select(species = Species, petal_width = Petal.Width, petal_length = Petal.Length) %>%
+  mutate(petal_ratio = petal_width/petal_length) %>%
+  group_by(species) %>%
+  summarize(mean_petal_ratio = mean(petal_ratio),
+            sd_petal_ratio = sd(petal_ratio),
+            median_petal_ratio = median(petal_ratio))
+```
+
+## Exercise 4.1
+The best way to really understand this is to look at some more hands on examples.  For this exercise we will dig into our datasets and find ways to tidy them up.  We will do this together via examples in the [`yale_markdown.Rmd`](https://raw.githubusercontent.com/jhollist/yale_markdown/master/yale_markdown.Rmd) file.  Our goal will be to add in the the GDP per capita values and then calculate an estimate of the population for each country.  To do this we will need to tidy up our data, join datasets together and add in a new column with the population estimates.  
