@@ -121,7 +121,12 @@ We have learned about data frames, how to create them, and about several ways to
 3. Each cell has a single value
 4. The data must be rectangular
 
-If you want to read more about this there are several good sources:
+The best way to start to understand this is to look at examples.  Let's dig into our datasets and find ways to tidy them up.  We will do this together via examples in the [`yale_markdown.Rmd`](https://raw.githubusercontent.com/jhollist/yale_markdown/master/yale_markdown.Rmd) file.  Our goal will be to add in the the GDP per capita values and then calculate an estimate of the population for each country.  To do this we will need to tidy up our data, join datasets together and add in a new column with the population estimates. 
+
+Lastly, if you want to read more about this there are several good sources:
+
 - The previously linked R4DS Chapter on [tidy data](http://r4ds.had.co.nz/tidy-data.html)
-- The [original paper by Hadley Wickham]()
+- The [original paper by Hadley Wickham](https://www.jstatsoft.org/article/view/v059i10)
+- The [Tidy Data Vignette](http://tidyr.tidyverse.org/articles/tidy-data.html)
+- Really anything on the [Tidyverse page](https://www.tidyverse.org/)
 

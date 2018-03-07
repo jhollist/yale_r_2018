@@ -149,8 +149,19 @@ This is the simplest case, but lets dig into the options to see what's possible
 
 ## Tidy data
 
-So we now have two data frames (R speak for a dataset), but the best way to plot these is to have them in a single data frame.  The best way I know how to do this is by using the concept of [tidy data](http://r4ds.had.co.nz/tidy-data.html).  The essence of which can be summed up as:
+We have learned about data frames, how to create them, and about several ways to read in external data into a data.frame.   At this point there have been only a few rules applied to our data frames (which already separates them from spreadsheets) and that is our datasets must by rectangular.  Beyond that we havent disscussed how best to organize that data so that subsequent analyses are easier to accomplish. This is, in my opinion, the biggest decision we make as data analysts and it takes a lot of time to think about how best to organize data and to actually re-organize that data.  Luckily, we can use an existing concept for this that will help guide our decisions and re-organization.  The best concept I know of to do this is the concept of [tidy data](http://r4ds.had.co.nz/tidy-data.html).  The essence of which can be summed up as:
 
 1. Each column is a variable
 2. Each row is an observation
 3. Each cell has a single value
+4. The data must be rectangular
+
+The best way to start to understand this is to look at examples.  Let's dig into our datasets and find ways to tidy them up.  We will do this together via examples in the [`yale_markdown.Rmd`](https://raw.githubusercontent.com/jhollist/yale_markdown/master/yale_markdown.Rmd) file.  Our goal will be to add in the the GDP per capita values and then calculate an estimate of the population for each country.  To do this we will need to tidy up our data, join datasets together and add in a new column with the population estimates. 
+
+Lastly, if you want to read more about this there are several good sources:
+
+- The previously linked R4DS Chapter on [tidy data](http://r4ds.had.co.nz/tidy-data.html)
+- The [original paper by Hadley Wickham](https://www.jstatsoft.org/article/view/v059i10)
+- The [Tidy Data Vignette](http://tidyr.tidyverse.org/articles/tidy-data.html)
+- Really anything on the [Tidyverse page](https://www.tidyverse.org/)
+
