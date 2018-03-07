@@ -33,7 +33,7 @@ Last thing to take care of is to make sure you have a GitHub account set up.  Th
 |10:30 AM - 11:30 AM|[R Basics](lessons/02_r_basics.md)|
 |11:30 AM - Noon    |[Reproducible Research with R Markdown](lessons/03_rr_and_rmarkdown.md)|
 |Noon - 1:00 PM     |LUNCH|
-|1:00 PM - 2:00 PM  |[Tidy Data in R](lessons/04_tidy_data_in_r.Rmd)
+|1:00 PM - 2:00 PM  |[Tidy Data in R](lessons/04_tidy_data_in_r.md)
 |2:00 PM - 3:00 PM  |[Data Visualization with `ggplot2`](lessons/05_data_viz_with_ggplot2.md)|
 |3:00 PM - 4:00 PM  |[Git and GitHub](lessons/06_git_and_github.md)| 
 |4:00 PM - 4:30 PM  |Miscellaneous|

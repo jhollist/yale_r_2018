@@ -19,7 +19,7 @@ In this lesson we are going to go over the very basics of R, cover some basic te
 
 R is a functional programming language and as such, most everything you do uses a function.
 
-The basic syntax of function follows the form: `function_name(arg1, arg2, ...)`.  With the base install, you will gain access to many (2925 functions, to be exact).  Some examples:
+The basic syntax of function follows the form: `function_name(arg1, arg2, ...)`.  With the base install, you will gain access to many (3011 functions, to be exact).  Some examples:
 
 
 ```r
@@ -46,21 +46,21 @@ rnorm(100,mean=10,sd=2)
 ```
 
 ```
-##   [1]  8.528013  7.516343 10.187090  6.749085  6.768267 14.753797 11.029263
-##   [8]  9.495388  9.490882  8.917163 11.674955 10.286181 13.064623  7.446098
-##  [15] 12.386976  6.571405  9.460026 12.367522  9.192736  5.928906 10.763808
-##  [22] 10.279514 12.492799 12.486795  7.268113  9.567898  8.184697 14.535543
-##  [29] 12.239086  9.473323  8.712520 13.547811  9.410362 10.140625 12.099625
-##  [36] 12.442091 11.686279  8.634723  9.443363  6.651266  7.272432  9.805012
-##  [43]  9.568905  6.831657 15.530321  9.309148  5.256596  7.730677 11.388602
-##  [50]  9.076915  8.654631 10.314373  7.118712  7.835714 10.656552  7.199979
-##  [57]  9.899884 12.440127  7.033263  8.303181 11.207748  7.450956  9.821425
-##  [64]  7.424570  9.255116 10.148551  8.270997 10.900257  9.897516  8.230040
-##  [71] 10.148623 10.499618  8.649840 10.174269 11.253152  6.555323  8.322553
-##  [78]  8.215069 13.339277 10.765445 12.656711 11.991631  6.581790  7.037685
-##  [85]  9.480289  8.870986  8.958252 10.150251  7.187827  6.495198 11.229179
-##  [92] 10.441488  9.172312  9.692661 10.762017  7.690683  9.134065 11.872170
-##  [99] 14.545463 12.705070
+##   [1] 12.127638 12.177538 12.679371 11.572314  9.983219 10.639572 12.189423
+##   [8]  9.186717 10.913731 10.801671 12.990144  9.091207 15.363323 10.152471
+##  [15]  8.553171  4.949820 10.586966  8.904035 14.800651  9.658659 12.003284
+##  [22] 11.004449  6.709088  9.657855 13.293486  8.028517 11.051781 12.176128
+##  [29] 12.857381 12.996715 14.078194  9.013033 11.610529  9.256833  8.680884
+##  [36]  9.235067 13.415824 10.070756  8.116071 10.917465  9.415027 11.693892
+##  [43]  9.737885 13.152864  7.291532 10.152172 12.131960  9.907044  6.563959
+##  [50] 12.121976 12.442582  9.049659 11.435532  7.487309 11.110348 11.738899
+##  [57]  9.520516  9.781367 12.579131  9.281988 14.841182  9.072201  9.912728
+##  [64] 13.004797 10.914650  7.033384  9.484845  8.193495 10.649312  8.146949
+##  [71] 11.137819 10.630792  8.309224 10.725649  8.264861 10.637346  6.517480
+##  [78]  8.797483 12.102816  7.663210  7.442749  9.400063  8.991156 10.332045
+##  [85] 16.272095  9.280877 11.336243 13.893183  9.048148 10.786377  9.962864
+##  [92]  8.652303  9.616760 12.087304  8.810883 10.716345 11.136384 15.010060
+##  [99]  6.958564 10.051060
 ```
 
 ```r
@@ -69,7 +69,7 @@ mean(rnorm(100))
 ```
 
 ```
-## [1] -0.04677998
+## [1] -0.1932236
 ```
 
 ```r
@@ -78,7 +78,7 @@ sum(rnorm(100))
 ```
 
 ```
-## [1] 2.964955
+## [1] 6.525684
 ```
 
 ### A few side notes 
@@ -102,7 +102,7 @@ The base install of R is quite powerful, but you will soon have a need or desire
 
 ### CRAN
 
-One of the reasons for R's popularity is CRAN, [The Comprehensive R Archive Network](http://cran.r-project.org/).  This is where you download R and also where most will gain access to packages (there are other places, but that is for later).  Not much else to say about this now other than to be aware of it.  As of 2018-03-05, there are 12190 on CRAN! 
+One of the reasons for R's popularity is CRAN, [The Comprehensive R Archive Network](http://cran.r-project.org/).  This is where you download R and also where most will gain access to packages (there are other places, but that is for later).  Not much else to say about this now other than to be aware of it.  As of 2018-03-07, there are 12212 on CRAN! 
 
 ### Installing packages
 
