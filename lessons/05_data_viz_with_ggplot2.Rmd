@@ -14,20 +14,20 @@ library("dplyr")
 library("googlesheets")
 library("tidyr")
 
-gap_gdp <- read_csv("gapminder_gdp.csv")
-gap_co2_url <- "https://docs.google.com/spreadsheets/d/1qJR55SL3lHcx1d3hMHJ1dMYqAog9sXofaPWjPkpO4QQ/pub"
-gap_co2 <- gs_read(gs_url(gap_co2_url))
-gap_gdp_tidy <- gap_gdp %>%
-  gather("year","gdp",-1) %>%
-  select(country = `GDP (constant 2000 US$)`, everything())
+#gap_gdp <- read_csv("gapminder_gdp.csv")
+#gap_co2_url <- "https://docs.google.com/spreadsheets/d/1qJR55SL3lHcx1d3hMHJ1dMYqAog9sXofaPWjPkpO4QQ/pub"
+#gap_co2 <- gs_read(gs_url(gap_co2_url))
+#gap_gdp_tidy <- gap_gdp %>%
+#  gather("year","gdp",-1) %>%
+#  select(country = `GDP (constant 2000 US$)`, everything())
 
-gap_co2_tidy <- gap_co2 %>%
-  gather("year","co2_emiss", -1) %>%
-  select(country = `CO2 emission total`, everything())
+#gap_co2_tidy <- gap_co2 %>%
+#  gather("year","co2_emiss", -1) %>%
+#  select(country = `CO2 emission total`, everything())
 
-gap_data <- gap_gdp_tidy %>%
-  left_join(gap_co2_tidy, by = c("country", "year")) %>%
-  filter(complete.cases(gdp,co2_emiss))
+#gap_data <- gap_gdp_tidy %>%
+#  left_join(gap_co2_tidy, by = c("country", "year")) %>%
+#  filter(complete.cases(gdp,co2_emiss))
 ```
 
 

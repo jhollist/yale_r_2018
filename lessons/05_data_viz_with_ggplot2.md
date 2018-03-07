@@ -1,19 +1,4 @@
 
-```
-## Error in read_csv("gapminder_gdp.csv"): could not find function "read_csv"
-```
-
-```
-## Downloading: 1.3 kB     Downloading: 1.3 kB     Downloading: 5.3 kB     Downloading: 5.3 kB     Downloading: 9 kB     Downloading: 9 kB     Downloading: 13 kB     Downloading: 13 kB     Downloading: 15 kB     Downloading: 15 kB     Downloading: 16 kB     Downloading: 16 kB     Downloading: 20 kB     Downloading: 20 kB     Downloading: 24 kB     Downloading: 24 kB     Downloading: 26 kB     Downloading: 26 kB     Downloading: 30 kB     Downloading: 30 kB     Downloading: 31 kB     Downloading: 31 kB     Downloading: 33 kB     Downloading: 33 kB     Downloading: 35 kB     Downloading: 35 kB     Downloading: 36 kB     Downloading: 36 kB     Downloading: 37 kB     Downloading: 37 kB     Downloading: 39 kB     Downloading: 39 kB     Downloading: 40 kB     Downloading: 40 kB     Downloading: 41 kB     Downloading: 41 kB     Downloading: 44 kB     Downloading: 44 kB     Downloading: 45 kB     Downloading: 45 kB     Downloading: 49 kB     Downloading: 49 kB     Downloading: 50 kB     Downloading: 50 kB     Downloading: 51 kB     Downloading: 51 kB     Downloading: 52 kB     Downloading: 52 kB     Downloading: 52 kB     Downloading: 52 kB
-```
-
-```
-## Error in eval(lhs, parent, parent): object 'gap_gdp' not found
-```
-
-```
-## Error in eval(lhs, parent, parent): object 'gap_gdp_tidy' not found
-```
 
 
 # Data Visualization with ggplot2
