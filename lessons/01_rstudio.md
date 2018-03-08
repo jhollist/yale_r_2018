@@ -1,17 +1,17 @@
 
 
-# R Basics
+# RStudio
 
-In this first lesson we are going to go over the very basics of R, cover some basic terminology, talk a little about syntax and point you to resources for getting help.
+In this first lesson we are going to go over the very basics of using RStudio.  We need to do this so we can jump into our example.
 
 ## Lesson Outline:
 
-- [Working with R and RStudio](#working-with-r-and-rstudio)
+- [Working with RStudio](#working-with-rstudio)
 
 ## Lesson Exercises:
 - [Exercise 1.1](#exercise-11)
 
-## Working with R and RStudio
+## Working with RStudio
 Over the last several years, RStudio has become a very popular IDE (integrated development environment) for R. In addition to interacting with the R Console, RStudio has many extras built in including version control integration, package building, reproducible research, de-bugging, and built-in text editor with smart highlighting and code completion.  This is the environment we will be using for the workshop and should set you up for continued learning with R.
 
 Before we get to the first exercise, let's spend a bit of time working with RStudio. Just watch as I demo this.  The first exercise will have you doing these steps.
