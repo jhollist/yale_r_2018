@@ -52,4 +52,4 @@ Last thing to take care of is to make sure you have a GitHub account set up.  Th
 - Industrial Ecology Links
   - [Industrial Ecology](https://github.com/IndEcol)
   - [World Input/Output Datasets](https://github.com/bquast/wiod)
-  - [Industrial Ecology 2.0](http://onlinelibrary.wiley.com/doi/10.1111/j.1530-9290.2010.00281.x/full)
+  - [Data Transparency in Industrial Ecology](http://onlinelibrary.wiley.com/doi/10.1111/jiec.12738/full)
